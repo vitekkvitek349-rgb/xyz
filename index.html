@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jednoduchý generátor tréninkového plánu do posilovny." />
+    <title>Tréninkový parťák</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <p class="eyebrow">TVŮJ TRÉNINKOVÝ PARŤÁK</p>
+        <h1>Plán do posilovny, který dává smysl.</h1>
+        <p class="intro">Nastav si pár parametrů a získej jednoduchý týdenní tréninkový plán na míru.</p>
+      </section>
+
+      <section class="planner" aria-labelledby="form-title">
+        <div class="card form-card">
+          <h2 id="form-title">Jak chceš trénovat?</h2>
+          <form id="plan-form">
+            <div class="field-grid">
+              <label>
+                Cíl
+                <select id="goal" name="goal">
+                  <option value="strength">Síla</option>
+                  <option value="muscle" selected>Nabrat svaly</option>
+                  <option value="fitness">Kondice a hubnutí</option>
+                </select>
+              </label>
+
+              <label>
+                Zkušenost
+                <select id="level" name="level">
+                  <option value="beginner" selected>Začátečník</option>
+                  <option value="intermediate">Pokročilý</option>
+                </select>
+              </label>
+
+              <label>
+                Tréninky týdně
+                <select id="days" name="days">
+                  <option value="2">2 dny</option>
+                  <option value="3" selected>3 dny</option>
+                  <option value="4">4 dny</option>
+                </select>
+              </label>
+
+              <label>
+                Čas na trénink
+                <select id="duration" name="duration">
+                  <option value="short">30–45 minut</option>
+                  <option value="standard" selected>45–60 minut</option>
+                  <option value="long">60+ minut</option>
+                </select>
+              </label>
+
+              <label class="wide">
+                Vybavení
+                <select id="equipment" name="equipment">
+                  <option value="gym" selected>Kompletní posilovna</option>
+                  <option value="basic">Činky a lavička</option>
+                  <option value="bodyweight">Jen vlastní váha</option>
+                </select>
+              </label>
+            </div>
+            <button type="submit">Navrhnout plán <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+
+        <div class="card result-card" id="result" aria-live="polite">
+          <p class="result-kicker">PŘIPRAVENO PRO TEBE</p>
+          <h2>Vyplň nastavení a nech si sestavit plán.</h2>
+          <p class="result-note">Plán ber jako praktický základ. U nových cviků si nech zkontrolovat techniku trenérem.</p>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
