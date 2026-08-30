@@ -75,6 +75,23 @@
         </div>
       </section>
     </main>
+    <dialog id="exercise-dialog" class="exercise-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-top">
+        <p class="result-kicker">TECHNIKA CVIKU</p>
+        <button class="icon-button" id="close-dialog" type="button" aria-label="Zavřít detail cviku">×</button>
+      </div>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-summary" class="dialog-summary"></p>
+      <div class="detail-section">
+        <h3>Jak na to</h3>
+        <ol id="dialog-steps"></ol>
+      </div>
+      <div class="detail-section cue-section">
+        <h3>Co si hlídat</h3>
+        <ul id="dialog-cues"></ul>
+      </div>
+      <a id="dialog-video" class="video-link" target="_blank" rel="noreferrer">Najít ukázku na YouTube <span aria-hidden="true">↗</span></a>
+    </dialog>
     <script src="app.js"></script>
   </body>
 </html>
